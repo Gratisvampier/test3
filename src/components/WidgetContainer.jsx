@@ -44,7 +44,19 @@ const InputsContainer = styled('div')`
 
   ${DateInputContainer} {
     width: ${({ $sizes: { M } }) => (M ? '50%' : '100%')};
-    min-width: ${({ $sizes: { M } }) => (M ? 190 : 200)}px;
+
+    ${({ $sizes: { M } }) =>
+      M
+        ? `
+          min-width: 190px;
+        `
+        : ''}
+    ${({ $sizes: { S } }) =>
+      S
+        ? `
+          min-width: 160px;
+        `
+        : ''}
 
     &:not(:last-child) {
       margin-right: ${({ $sizes: { S } }) => (S ? 0 : '20px')};
@@ -77,14 +89,16 @@ const WidgetButton = styled('button')`
   ${({ $sizes: { M } }) =>
     M
       ? `
-    margin-top: 20px;
-  `
+        margin-top: 20px;
+
+      `
       : ''}
   ${({ $sizes: { S } }) =>
     S
       ? `
-    margin-top: 15px;
-  `
+        margin-top: 15px;
+        min-width: 160px;
+      `
       : ''}
 `;
 

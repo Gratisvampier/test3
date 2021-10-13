@@ -101,7 +101,6 @@ module.exports = (env, args) => {
         chunks: ['main'],
       }),
       require('autoprefixer'),
-      new BundleAnalyzerPlugin(),
     ],
   };
 
