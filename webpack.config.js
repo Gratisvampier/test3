@@ -8,6 +8,8 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const BundleAnalyzerPlugin =
   require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
+const PORT = process.env.PORT || 3030;
+
 module.exports = (env, args) => {
   const isProduction = args && args['mode'] === 'production';
 
@@ -81,7 +83,7 @@ module.exports = (env, args) => {
       contentBase: './dist',
       publicPath: '/',
       compress: false,
-      port: 3030,
+      port: PORT,
       historyApiFallback: true,
       hot: true,
       inline: true,
