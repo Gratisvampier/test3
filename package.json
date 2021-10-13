@@ -9,9 +9,7 @@
 		"clean": "rimraf ./dist"
 	},
 	"dependencies": {
-		"autoprefixer": "10.3.7",
 		"goober": "2.0.41",
-		"postcss": "8.3.9",
 		"preact": "10.5.13"
 	},
 	"devDependencies": {
@@ -19,6 +17,7 @@
 		"@babel/plugin-transform-react-jsx": "7.14.9",
 		"@babel/preset-env": "7.15.8",
 		"@babel/preset-react": "7.14.5",
+		"autoprefixer": "10.3.7",
 		"babel-loader": "8.2.2",
 		"copy-webpack-plugin": "8.0.0",
 		"css-loader": "6.4.0",
